@@ -343,7 +343,7 @@ class ParallelExperimentRunner(Base):
     def run(self):
         """Used to be more than this with warmup.
         """
-        self.run_tests(save_output=True)
+        self.run_tests(save_output=False)
 
 
 class ExperimentRunner(Base):
@@ -448,7 +448,7 @@ class ExperimentRunner(Base):
         
         print("############ WARMUP PHASE COMPLETE ##############")
         print("############  RUNNING LOAD TESTS   ##############")
-        self.run_tests(dataset, save_output=True)
+        self.run_tests(dataset, save_output=False)
         
 
 def main():
